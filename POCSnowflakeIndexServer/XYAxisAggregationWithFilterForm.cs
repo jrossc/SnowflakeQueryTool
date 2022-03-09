@@ -495,13 +495,13 @@ namespace POCSnowflakeIndexServer
             {
                 if (counter == 0)
                 {
-                    filterFormat = string.Format("WHERE {0} {1} {2}", Filter, Operator, Value);
+                    filterFormat = string.Format("WHERE {0} {1} '{2}'", Filter, Operator, Value);
                     currentString = currentString + Environment.NewLine + filterFormat + Environment.NewLine;
                     counter++;
                 }
                 else if (counter > 0)
                 {
-                    filterFormat = string.Format("AND {0} {1} {2}", Filter, Operator, Value);
+                    filterFormat = string.Format("AND {0} {1} '{2}'", Filter, Operator, Value);
                     currentString = currentString + filterFormat + Environment.NewLine;
                     counter++;
                 }
