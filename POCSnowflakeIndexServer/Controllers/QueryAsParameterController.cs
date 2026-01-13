@@ -14,6 +14,16 @@ namespace POCSnowflakeIndexServer.Controllers
     {
         public readonly string connectionString = ConnectionStringBuilder.FinalConnectionString;
 
+        public QueryAsParameterController()
+        {
+            connectionString = ConnectionStringBuilder.FinalConnectionString;
+        }   
+
+        public QueryAsParameterController(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
+
         public async Task<object> Get(string command)
         {
             using (DataAccess da = new SnowflakeDataAccess())
