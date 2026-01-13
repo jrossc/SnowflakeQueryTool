@@ -10,9 +10,19 @@ using System.Threading.Tasks;
 
 namespace POCSnowflakeIndexServer.Controllers
 {
-    class SpecificQueryController : ISpecificQueryService
+    public class SpecificQueryController : ISpecificQueryService
     {
         public readonly string connectionString = ConnectionStringBuilder.FinalConnectionString;
+
+        public SpecificQueryController()
+        {
+            connectionString = ConnectionStringBuilder.FinalConnectionString;
+        }
+
+        public SpecificQueryController(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
         public async Task<object> Get()
         {
 
