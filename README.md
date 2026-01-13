@@ -45,3 +45,6 @@ by selecting from dropdown fields, including the `fieldA` and `fieldB` to form a
 by selecting from dropdown fields, including the `fieldA` and `fieldB` to form a query that is equivalent to running
 
 > SELECT fieldA AS 'ALIAS', fieldB as 'ALIAS2' (AGGREGATE)fieldB FROM TABLE (WHERE filter = 'param' AND filter = 'param2'... etc) GROUP BY fieldA, fieldB
+
+## Unit Test Project
+The solution now includes a unit test project that enables developers to test methods that are included in the Data Access Layer files and Controllers. Tests can be added or removed.
